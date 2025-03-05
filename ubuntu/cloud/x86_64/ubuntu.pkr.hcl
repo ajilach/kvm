@@ -80,6 +80,7 @@ source "qemu" "ubuntu" {
   disk_size        = "16G"
   iso_checksum     = var.iso_checksum
   iso_url          = var.iso_url
+  headless         = true
   qemuargs = [
     ["-cdrom", "boot-${var.vm_name}/cidata.iso"]
   ]
